@@ -1,0 +1,448 @@
+/* Configurações Globais--------------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    border-spacing:0;
+    border:0;
+}
+
+:root{
+    --lightt: #fff;
+
+    --black-10: #ededed;
+    --black-20: #dadada;
+    --black-40: #b2b2b2;
+    --black-60: #878787;
+    --black-80: #575757;
+    --black-85: #282828;
+    --black-90: #202020;
+    --black-95: #141414;
+    --black-100: #0c0c0c;
+
+
+    --green-10:#5ab450;
+    --green-40:#327828;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: var(--black-60);
+}
+
+/*Scrollbar--------------------------------*/
+
+::-webkit-scrollbar{
+    width:10px;
+    background-color: var(--black-10);
+}
+
+::-webkit-scrollbar-thumb{
+    width:7px;
+    background-color: var(--black-20);
+}
+
+/*Nav--------------------------------*/
+
+#cabecalho{
+    background:var(--lightt);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 0 30px 0;
+    align-items: center;
+    top: 0px;
+    left:0px;
+    right:0px;
+    z-index: 2;
+
+    box-shadow: rgba(120 120 120 / 30%) 0 1px 10px;
+}
+
+#cabecalho{
+    color: var(--black-40);
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.nav h1{
+    letter-spacing: 0.25em;
+}
+
+#cabecalho .fa-solid{
+    font-size: 25px;
+    color: var(--black-40);
+    margin-right: 3px;
+}
+
+#cabecalho .fa-solid:hover{
+    color: var(--black-80);
+    cursor: pointer;
+}
+
+#cabecalho .cabecalho_item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#cabecalho .cabecalho_item img{
+    height: 40px;
+}
+
+/*Main--------------------------------*/
+
+main{
+
+    height: 100vh;
+    padding: 100px 0;
+    width: 80%;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    animation: dark-to-light 0.3s ease-in-out;
+}
+
+.descricao{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    align-items: center;
+}
+
+.descricao p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black-60);
+}
+
+.descricao h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black-80);
+    margin-top: 20px;
+}
+
+.medicamento img{
+    max-width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+/*Download Bula--------------------------------*/
+
+.download_bula a{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--green-10);
+    font-size: 0.9rem;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.download_bula i{
+    color: var(--green-10);
+    font-size: 0.9rem;
+}
+
+.download_bula:hover{
+     transform: scale(1.05);
+}
+
+/*Show Hide--------------------------------*/
+
+.adicional button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color:rgba(255, 255, 255, 0);
+    width: 100%;
+    border:none;
+    padding: 40px 0 20px 0;
+    cursor:pointer;
+}
+
+#info_adicional{
+    margin-top: 40px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.adicional{
+    width: 100%;
+    margin-bottom: 180px;
+}
+
+.adicional button{
+    width:100%;
+    display:flex;
+    height:50px;
+    justify-content:space-between;
+    flex-direction:row;
+    align-items: center;
+    gap:30px;
+    padding: 35px 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.hide_name{
+    display: flex;
+    gap: 15px;
+    color: var(--black-60) ;
+    font-size: 0.9rem;
+    height: 20px;
+}
+
+.texto{
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+#info_adicional .adicional{
+    gap: 30px;
+}
+
+#info_adicional li{
+    list-style: none;
+}
+
+.fa-circle-plus, .fa-circle-minus {
+    color: var(--black-20);
+}
+
+.audio{
+    padding: 10px;
+}
+
+.audio audio{
+    width: 100%;
+}
+
+.hide_name:hover{
+    color: var(--black-80);
+}
+.fa-circle-plus:hover, .fa-circle-minus:hover{
+    color: var(--black-80);
+}
+
+.adicional hr{
+    border: none;
+    background-color: var(--black-20);
+    height: 0.7px;
+    border-radius: 2px;
+}
+
+/*Video--------------------------------*/
+.video iframe{
+    width: 100%;
+    
+}
+
+.video{
+    width: 100%;
+}
+
+/*Show hide - Display none--------------------------------*/
+
+.info_hide_1{
+    display: none;
+}
+
+.info_hide_2{
+    display: none;
+}
+
+.info_hide_3{
+    display: none;
+}
+
+#medicamento_smart{
+    display:none;
+}
+
+/*Footer--------------------------------*/
+
+#rodape{
+    background:var(--lightt);
+    height: 110px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    width: 100%;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+
+    box-shadow: rgba(120 120 120 / 30%) 0 1px 10px 1px;
+}
+
+#rodape ul{
+    display: flex;
+    gap: 2px;
+    list-style: none;    
+}
+
+#rodape p{
+    color: var(--black-40);
+    font-size: 0.8rem;
+    padding: 1px;
+}
+
+#rodape a{
+    text-decoration: none;
+    color: var(--black-60);
+    font-size: 0.9rem;
+}
+
+#rodape a:hover{
+    color: var(--black-90);
+}
+
+#rodape li {
+    width: 50px;
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rodape i{
+    font-size: 30px;
+    color: var(--black-40);
+    
+}
+
+#rodape i:hover{
+    font-size: 35px;
+    color:var(--black-80);
+    transform: scale(1.05);
+}
+
+/*Tema escuro-----------------------------------*/
+
+.dark#corpo{
+    background-color: var(--black-90);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+.dark .descricao h2,.dark .descricao p{
+    color: var(--black-10);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+.dark#corpo .nav{
+    background-color: var(--black-95);
+    box-shadow: rgba(10 10 10  / 50%) 0 1px 10px;
+}
+
+.dark .hide_name, .dark .texto{
+    color: var(--black-10);
+}
+
+.dark .hide_name:hover{
+    color: var(--green-10);
+}
+
+.dark#corpo .footer{
+    background-color: var(--black-95);
+    box-shadow: rgba(10 10 10  / 50%) 0 1px 10px;
+}
+
+.dark#corpo .footer p{
+    color: var(--black-80);
+}
+
+.dark#corpo .footer a{
+    color: var(--black-80);
+}
+
+.dark#corpo .footer a:hover{
+    color: var(--black-60);
+}
+
+.dark::-webkit-scrollbar{
+    background-color: var(--black-95);
+}
+
+.dark::-webkit-scrollbar-thumb{
+    background-color: var(--black-85);
+}
+
+@keyframes dark-to-light{
+    0%{
+        background-color:var(--black-90);
+    }
+    100%{
+        background-color: var(--lightt);
+    }
+}
+
+@keyframes light-to-dark{
+    0%{
+        background-color: var(--lightt);
+    }
+    100%{
+        background-color:var(--black-90);
+    }
+}
+
+/*Responsividade de telas----------------------*/
+
+@media(max-width:500px){
+    .video iframe{
+        height: 180px;
+    }
+
+    main img{
+        
+        margin-bottom: 30px;
+    }   
+}
+
+@media(max-width:560px){
+    #cabecalho h1{
+        visibility: hidden;
+        width: 1px;
+      }
+
+    #medicamento_grande{
+        display: none;
+    }
+
+    #medicamento_smart{
+        display:block;
+    }
+}
