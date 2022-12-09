@@ -6,6 +6,7 @@
     box-sizing:border-box;
     border-spacing:0;
     border:0;
+    outline: none;
 }
 
 :root{
@@ -179,7 +180,10 @@ main{
     border:none;
     padding: 40px 0 20px 0;
     cursor:pointer;
+   
 }
+
+
 
 #info_adicional{
     margin-top: 40px;
@@ -319,6 +323,7 @@ main{
     color: var(--black-40);
     font-size: 0.8rem;
     padding: 1px;
+    text-align: center;
 }
 
 #rodape a{
@@ -445,4 +450,10 @@ main{
     #medicamento_smart{
         display:block;
     }
+    
+    
+}
+
+html{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
